@@ -14,9 +14,13 @@ IDbConnection conn = new MySqlConnection(connString);
 
 #region Department
 
+////ADDING TO DEPARTMENTS
+
 //var departmentRepo = new DapperDepartmentRepository(conn);
 
 ////departmentRepo.InsertDepartment("Anything");
+
+////SELECTING DEPARTMENTS
 
 //var departments = departmentRepo.GetAllDepartments();
 
@@ -33,18 +37,31 @@ IDbConnection conn = new MySqlConnection(connString);
 #region Product
 var productRepository = new DapperProductRepository(conn);
 
-//940
+//UPDATING A PRODUCT
 
-var productToUpdate = productRepository.GetProduct(940);
+//var productToUpdate = productRepository.GetProduct(940);
 
 
-productToUpdate.Name = "Macbook";
-productToUpdate.Price = 1000;
-productToUpdate.CategoryID = 1;
-productToUpdate.StockLevel = 866;
-productToUpdate.OnSale = true;
+//productToUpdate.Name = "Macbook";
+//productToUpdate.Price = 1000;
+//productToUpdate.CategoryID = 1;
+//productToUpdate.StockLevel = 866;
+//productToUpdate.OnSale = true;
 
-productRepository.UpdateProduct(productToUpdate);
+//productRepository.UpdateProduct(productToUpdate);
+
+
+//DELETING A PRODUCT
+
+//productRepository.DeleteProduct(940);
+
+
+
+
+//SELECTING PRODUCTS
+
+
+
 
 var products = productRepository.GetAllProducts();
 
